@@ -1,14 +1,16 @@
-export class ship {
+import { Coordinate } from './coordinate';
 
-    points: String[];
+export class Ship {
+
+    _points: Coordinate[];
     _damaged: String[];
     _sunk: boolean;
     _health: number;
 
-    constructor(points: String[]) {
-        this.damaged = [];
-        this.sunk = false;
-        this.points = points;
+    constructor(points: Coordinate[]) {
+        this._damaged = [];
+        this._sunk = false;
+        this._points = points;
     }
 
     //getters and setters

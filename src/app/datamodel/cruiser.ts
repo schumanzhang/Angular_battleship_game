@@ -1,10 +1,11 @@
-import { ship } from './ship';
+import { Ship } from './ship';
+import { Coordinate } from './coordinate';
 
-export class cruiser extends ship {
+export class Cruiser extends Ship {
 
-    _maxSizeOfShip: number;
+    private _maxSizeOfShip: number;
 
-    constructor(points: String[]) {
+    constructor(points: Coordinate[]) {
         super(points);
         this._health = 3;
         this._maxSizeOfShip = 3;
