@@ -20,7 +20,7 @@ export class Board {
         this._player1ShipPoints = player1ShipPoints;
         this._player2ShipPoints = player2ShipPoints;
     }
-    
+
     //getters and setters
 
 
@@ -30,6 +30,15 @@ export class Board {
 
     calculateRemainingPoints() {
 
+    }
+
+    convertStringToCoordinates(text: string): Coordinate {
+        let splitArray = text.split('');
+        let coordinate: Coordinate = {
+            xPosition: splitArray[0],
+            yPosition: parseInt(splitArray[1])
+        }
+        return coordinate;
     }
 
 }
